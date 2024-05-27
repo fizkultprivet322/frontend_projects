@@ -1,0 +1,734 @@
+html, body {
+    font-family: 'Geologica', sans-serif;
+
+}
+ul {
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.hamburger-menu{
+    display: none;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+  background: #fff;
+color: white;
+text-align: center;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 26px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+
+  background-color: #616161;
+
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  z-index: 10;
+  width: 200px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #fff;
+  transition-duration: .25s;
+  box-shadow: 1px 0px 6px #E21919;
+}
+.menu_item1{
+    color: black;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.menu_item1:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.menu_item1:active{
+    color: white;
+    text-decoration: none;
+}
+
+.menu__box button{
+    background-color: #ffa001;
+    width: 80%;
+    border-radius: 5px;
+    border: 2px solid #ffa001;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.menu{
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+@media(max-width: 1200px){
+    .hamburger-menu{
+    display: block;
+}
+.menu{
+    display: none;
+}
+}
+
+.logo{
+    width: 190px;
+}
+
+.center{
+    text-align: center;
+}
+
+.main{
+    background: url(../img/fon.png) center/cover no-repeat;
+}
+
+.main h1{
+    color: #FFF;
+    font-size: 54.68px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.main span{
+    text-decoration: underline;
+    text-decoration-color: #E21919;
+}
+
+.main p{
+    color: #FFF;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+max-width: 472px;
+}
+
+.main button{
+    width: 314px;
+    height: 83px;
+    border-radius: 10px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.30);
+    color: #000;
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    backdrop-filter: blur(15px);
+}
+
+.one_tarif{
+    width: 100%;
+    border-radius: 15px;
+    background: rgba(226, 25, 25, 0.30);
+    padding-top: 40px;
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-bottom: 40px;
+}
+
+.tarifs h2{
+    color: #000;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.price_tarif{
+    width: max-content;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 10px;
+    background: #FFF;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: center;
+}
+
+.one_tarif h3{
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.one_tarif li{
+    list-style: inside;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 30px;
+}
+
+.one_tarif button{
+    width: 252px;
+    height: 66px;
+    border-radius: 15px;
+    background: #FFF;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+}
+
+.one_tarif_center{
+    background: #B50000;
+    color: white;
+}
+
+.one_tarif_center h3{
+    color: white;
+}
+
+.one_tarif_center li{
+    color: white;
+}
+
+.one_tarif_center button{
+    background: #F7DE29;
+}
+
+.price_tarif_center{
+    background: #F7DE29;
+}
+
+.say_misha button{
+    color: #F00;
+text-align: center;
+font-family: Geologica;
+font-size: 25px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+width: 384px;
+height: 83px;
+border-radius: 10px;
+border: 2px solid #F00;
+background: white;
+}
+
+.say_misha button:hover{
+    background: #F00;
+    color: white;
+}
+
+.tarifs h2{
+    color: #000;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.process h2{
+    color: #000;
+    text-align: left;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.process h3{
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.blog h2{ color: #FFF; font-size: 40px; font-style: normal; font-weight: 600;
+line-height: normal; text-transform: uppercase; background: #E21919;
+padding-top: 23px; padding-bottom: 23px; padding-right: 35px; padding-left:
+35px; width: max-content; }
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='red'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
+}
+
+.carousel-control-prev-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='red'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.rev h2{
+    color: #000;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.rev_one{
+    border-radius: 15px;
+    background: rgba(255, 236, 97, 0.30);
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 30px;
+    height: 261px;
+}
+
+.rev_one img{
+    width: 70px;
+}
+
+.rev_first{
+    margin-left: -14px;
+}
+
+.line_rev{
+    width: 98.5px !important;
+    height: 85px;
+    margin-left: -90px;
+    margin-top: -150px;
+}
+
+.rev_one h4{
+    color: #000;
+    display: inline-block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 18px;
+}
+
+.rev_one p{
+    margin-top: 25px;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.second_line_rev{
+    width: 98.5px;
+    margin-right: -70px;
+    margin-top: -20px;
+}
+
+.con{
+    width: 100%;
+    background: url(../img/fon_con.gif) center/cover no-repeat;
+}
+
+.black_con{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.70);
+}
+
+
+
+.con h2{
+    color: #FFF;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.con p{
+    color: #FFF;
+    font-size: 18.996px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.phone_con{
+    width: 47px;
+    margin-right: 15px;
+    margin-top: -15px;
+}
+
+.con h3{
+    display: inline-block;
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.soc_con{
+    width: 62px;
+    margin-right: 30px;
+}
+
+.con-form{
+    width: 100%;
+    border-radius: 15px;
+    background: #E21919;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.con h4{
+    color: #FFF;
+text-align: center;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.contacts_input{
+    margin-top: 22px;
+    width: 100%;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.40);
+    color: white;
+    height: 56px;
+    border: none;
+    padding-left: 15px;   
+}
+
+.your_text{
+    margin-top: 22px;
+    width: 100%;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.40);
+    color: white;
+    height: 56px;
+    border: none;
+    padding-left: 15px; 
+    height: 96px;
+    padding-top: 5px;
+}
+
+input::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.80);; }
+
+input::-moz-placeholder { color: rgba(255, 255, 255, 0.80);; }
+
+textarea::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.80);; }
+
+textarea::-moz-placeholder { color: rgba(255, 255, 255, 0.80);; }
+
+.contacts_input:focus-visible{
+    outline: 0px;
+}
+
+.your_text:focus-visible{
+    outline: 0px;
+}
+
+.contacts_width_button{
+    border-radius: 5px;
+    background: #FFF;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+    margin-top: 30px;
+}
+
+.contacts_width_button:hover{
+    color: #B50000;
+}
+
+.foot{
+    background: #E21919;
+    height: 98px;
+    color: #FFF;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.foot_logo{
+    width: 70px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.margin_foot{
+    margin-top: 37px;
+}
+
+.about h2{
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.about p{
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main button:hover{
+    border: 2px solid #F00;
+    background: #F00;
+    color: white;
+}
+
+.one_tarif button:hover{
+    border: 2px solid #E21919;
+    background: #FFF;
+    color: #E21919;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #000;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(175, 175, 175, 0.50);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.main{
+    padding-top: 90px;
+}
+
+.foot a{
+    text-decoration: none;
+    color: white;
+}
+
+@media(max-width: 1400px){
+    .menu{
+        font-size: 15px;
+    }
+    .foot{
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 1200px){
+    .one_tarif h3{
+        font-size: 20px;
+    }
+    .con-form{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+@media(max-width: 992px){
+    .main{
+        background: url(../img/fon_mob.png) center/cover no-repeat;
+    }
+}
+
+@media(max-width: 768px){
+    .main h1{
+        font-size: 28.402px;
+    }
+    .main p{
+        font-size: 16px;
+    }
+    .main button{
+        width: 209px;
+        font-size: 16.64px;
+        height: 55.245px;
+        border-radius: 6.656px;
+        border: 1.331px solid #FFF;
+        background: rgba(255, 255, 255, 0.30);
+    }
+    .main{
+        padding-bottom: 80px;
+    }
+    .say_misha button{
+        width: 209px;
+        font-size: 16.64px;
+        height: 55.245px;
+    }
+    .pro_video{
+        height: 200px;  
+    }
+    .carousel-item video{
+        height: 300px;
+    }
+    .rev_one{
+        height: auto;
+    }
+    .foot{
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .mob_left{
+        text-align: left;
+    }
+    .margin_foot{
+        margin-top: 10px;
+    }
+    .one_tarif h3{
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 576px){
+    .main p{
+        max-width: 244px;
+    }
+    .about h2{
+        font-size: 28px;
+    }
+    .about p{
+        font-size: 16px;
+    }
+    .tarifs h2{
+        font-size: 28px;
+    }
+    .one_tarif button{
+        width: 209px;
+        height: 55px;
+        font-size: 16.64px;
+    }
+    .process h2{
+        font-size: 28px;
+    }
+    .process h3{
+        font-size: 16px;
+    }
+    .blog h2{
+        font-size: 28px;
+    }
+    .carousel-item video{
+        height: 250px;
+    }
+    .rev h2{
+        font-size: 28px;
+    }
+    .con h2{
+        font-size: 28px;
+    }
+    .con p{
+        font-size: 16px;
+    }
+    .con h3{
+        font-size: 20px;
+    }
+    .phone_con{
+        margin-top: -5px;
+    }
+    .soc_con{
+        width: 41px;
+        margin-right: 15px;
+    }
+    .con h4{
+        font-size: 19px;
+    }
+    .contacts_input {
+        height: 47px;
+    }
+    .contacts_width_button{
+        margin-top: 15px;
+        font-size: 16.64px;
+    }
+}
